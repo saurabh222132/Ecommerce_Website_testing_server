@@ -35,7 +35,7 @@ server.use(
     exposedHeaders: ["X-Total-Count"],
     credentials: true,
 
-    origin: ["http://localhost:3000"],
+    origin: "*",
   })
 );
 

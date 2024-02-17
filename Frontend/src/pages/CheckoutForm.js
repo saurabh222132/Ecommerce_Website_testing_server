@@ -63,7 +63,8 @@ export default function CheckoutForm() {
       confirmParams: {
         // Make sure to change this to your payment completion page
         // return_url: `https://ecommerce-deployed-on-vercel.vercel.app/order-success/${currentOrder.id}`,
-        return_url: `http://localhost:3000/order-success/${currentOrder.id}`,
+        // return_url: `http://localhost:3000/order-success/${currentOrder.id}`,
+        return_url: `https://ecommerce-backend-testing-server.onrender.com/order-success/${currentOrder.id}`,
       },
     });
 
