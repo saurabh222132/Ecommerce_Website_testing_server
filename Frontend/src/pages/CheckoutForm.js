@@ -64,6 +64,7 @@ export default function CheckoutForm() {
         // Make sure to change this to your payment completion page
         // return_url: `https://ecommerce-deployed-on-vercel.vercel.app/order-success/${currentOrder.id}`,
         // return_url: `http://localhost:3000/order-success/${currentOrder.id}`,
+        // return_url: `https://shoppinghub12.netlify.app/order-success/${currentOrder.id}`,
         return_url: `https://ecommerce-backend-testing-server.onrender.com/order-success/${currentOrder.id}`,
       },
     });
