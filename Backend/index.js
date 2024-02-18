@@ -43,7 +43,7 @@ server.use(
 );
 
 //middlewares
-server.use(express.static(path.resolve(__dirname, "build")));
+// server.use(express.static(path.resolve(__dirname, "build")));
 server.use(cookieParser());
 server.use(
   session({
@@ -238,7 +238,7 @@ async function main() {
 
 server.get("/", (req, res) => {
   res
-    .cookie("jwt", "thisisjwttoken", { maxAge: 3600000 })
+    .cookie("jwt", "thisisjwttoken", { sameSite: none, maxAge: 3600000 })
     .json({ status: "success" });
 });
 

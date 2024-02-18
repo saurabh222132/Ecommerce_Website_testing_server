@@ -32,6 +32,7 @@ exports.createUser = async (req, res) => {
             const token = jwt.sign(sanitizeUser(user), SECRET_KEY);
             res
               .cookie("jwt", token, {
+                sameSite: none,
                 expires: new Date(Date.now() + 3600000),
                 httpOnly: true,
               })
@@ -49,9 +50,9 @@ exports.createUser = async (req, res) => {
 exports.loginUser = async (req, res) => {
   res
     .cookie("jwt", req.user.token, {
+      sameSite: none,
       withCredentials: true,
 
-      httpOnly: true,
       expires: new Date(Date.now() + 3600000),
       httpOnly: true,
     })
