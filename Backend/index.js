@@ -38,6 +38,7 @@ server.use(
     origin: [
       "https://main--shoppinghub12.netlify.app",
       "https://ecommerce-frontend-testing-server.onrender.com",
+      "http://localhost:3000",
     ],
   })
 );
@@ -238,7 +239,11 @@ async function main() {
 
 server.get("/", (req, res) => {
   res
-    .cookie("jwt", "thisisjwttoken", { sameSite: none, maxAge: 3600000 })
+    .cookie("jwt", "thisisjwttoken", {
+      sameSite: "none",
+      secure: "true",
+      maxAge: 3600000,
+    })
     .json({ status: "success" });
 });
 
