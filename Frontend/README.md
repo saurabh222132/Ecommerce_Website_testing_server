@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## Note about the project:
+
+"react-alert": "^7.0.3", --- need react@17
+"react-alert-template-basic": "^1.0.2", ------need react@17
+these two pacakages cause peer depedency conflicts
+
 In the project directory, you can run:
 
 ### `npm start`

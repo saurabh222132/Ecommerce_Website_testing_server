@@ -35,7 +35,10 @@ server.use(
     exposedHeaders: ["X-Total-Count"],
     credentials: true,
 
-    origin: "*",
+    origin: [
+      "https://main--shoppinghub12.netlify.app",
+      "https://ecommerce-frontend-testing-server.onrender.com",
+    ],
   })
 );
 
